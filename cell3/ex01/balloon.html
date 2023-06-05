@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>balloon</title>
+    <style>
+        .circuloRojo {
+            width: 200px;
+            height: 200px;
+            background-color: crimson;
+            border-radius: 50%;
+            background-position: center;
+        }
+        .circuloVerde {
+            width: 200px;
+            height: 200px;
+            background-color: greenyellow;
+            border-radius: 50%;
+            background-position: center;
+        }
+        .circuloAzul {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            border-radius: 50%;
+            background-position: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="circuloRojo" onclick="masDiez()" onmouseleave="menosCinco()" id="elDiv"></div>
+
+
+    <script>
+        var circulo = document.getElementById('elDiv');
+
+        circulo.addEventListener("click", colorABC);
+
+        function masDiez() {
+
+            var clientHeight = document.getElementById('elDiv').clientHeight += 10;
+            var clientWidth = document.getElementById('elDiv').clientWidth += 10;
+
+            if (clientWidth > 420) {
+                clientWidth = 200
+                clientHeight = 200
+            }
+
+            circulo.style.width = clientWidth.toString() + "px";
+            circulo.style.height = clientHeight.toString() + "px";
+            
+            //alert(clientHeight + " y " + clientWidth)
+        }
+
+        function menosCinco() {
+
+            var clientHeight = document.getElementById('elDiv').clientHeight -= 5;
+            var clientWidth = document.getElementById('elDiv').clientWidth -= 5;
+
+            if (clientWidth < 200) {
+                clientWidth = 200
+                clientHeight = 200
+            }
+
+            circulo.style.width = clientWidth.toString() + "px";
+            circulo.style.height = clientHeight.toString() + "px";
+            //alert(clientHeight + " y " + clientWidth)
+        }
+
+        function colorABC() {
+            var coloresABC = document.getElementById('elDiv');
+
+            if (coloresABC.style.backgroundColor = coloresABC.style.backgroundColor='crimson') {
+
+                coloresABC.style.backgroundColor='greenyellow;'
+        }
+        console.log(backgroundColor)
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

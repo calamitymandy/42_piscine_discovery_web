@@ -1,0 +1,11 @@
+body {
+    font-family:monospace;
+    font-size: larger;
+}
+table {
+    text-align: center;
+    width: 100%;
+}
+td {
+    width: 33%;
+}

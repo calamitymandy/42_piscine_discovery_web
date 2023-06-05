@@ -1,0 +1,30 @@
+body, html {
+    height: 100%
+}
+
+.parallax {
+    background-image: url("pajarito.jpg");
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contenedor {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.encima {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
